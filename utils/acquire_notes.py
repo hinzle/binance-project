@@ -39,7 +39,7 @@ def on_message(ws, message):
     json_message = json.loads(message)
     pprint.pprint(json_message)
 
-    # candle = json_message['k']
+    candle = json_message['k']
 
     # is_candle_closed = candle['x']
     # close = candle['c']

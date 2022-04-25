@@ -42,6 +42,20 @@ Method: margin spread.
 | qty | number of bitcoins purchased | float64 |
 | time | time order was executed | float64 |
 
+    1499040000000,      // Open time
+    "0.00386200",       // Open
+    "0.00386200",       // High
+    "0.00386200",       // Low
+    "0.00386200",       // Close
+    "0.47000000",  // Volume
+    1499644799999,      // Close time
+    "0.00181514",    // Quote asset volume
+    1,                // Number of trades
+    "0.47000000",    // Taker buy base asset volume
+    "0.00181514",      // Taker buy quote asset volume
+    "0" // Ignore.
+
+
 ## Steps to Reproduce
 
 1. You will need an env.py file that contains the hostname, username and password for your Binance account. Please check the resources on their page for encrypted api access. Store that env file locally in the repository.
