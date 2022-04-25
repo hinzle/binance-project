@@ -1,19 +1,21 @@
 # env
-local_path = '/Users/hinzlehome/codeup-data-science/binance-project/'
 import sys
+local_path = '/Users/hinzlehome/codeup-data-science/binance-project/'
 sys.path.insert(0,local_path+'.env')
-from env import get_db_url
+from env import API_KEY, API_SECRET
+
 
 # local-host
-import requests
-import os
-import datetime
+import math, os, datetime, json, pprint, requests
+# having a weird time requests
+
 
 # python data science library's
-import math
 import numpy as np
 import pandas as pd
 from scipy import stats
+import statsmodels.api as sm
+from statsmodels.tsa.api import Holt
 
 # sci-kit-learn modules
 from sklearnex import patch_sklearn
@@ -34,10 +36,16 @@ from sklearn.tree import DecisionTreeClassifier, plot_tree, export_text
 
 
 # visualizations
-from pydataset import data
 import matplotlib.pyplot as plt
 import seaborn as sns
+from matplotlib.dates import DateFormatter
+from pandas.plotting import register_matplotlib_converters
+from pydataset import data
 
+# binance modules
+import websocket, talib
+from binance.client import Client
+from binance.enums import *
 
 # state properties
 np.random.seed(123)
