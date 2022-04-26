@@ -20,6 +20,8 @@ from statsmodels.tsa.api import Holt
 # sci-kit-learn modules
 from sklearnex import patch_sklearn
 patch_sklearn()
+# $ conda install scikit-learn-intelex
+# $ python -m sklearnex my_application.py
 from sklearn.cluster import KMeans
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectKBest, RFE, f_regression
