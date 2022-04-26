@@ -16,6 +16,7 @@ env.py
 # folders
 __pycache__/
 csv/
+txt/
 
 config.py
 
