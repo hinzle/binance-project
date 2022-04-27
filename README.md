@@ -2,37 +2,31 @@
 
 ## About the Project
 
-hinzle_hijhacked
+This project analyzes recent bitcoin trade data in order to attempt price prediction.
 
-> ## "binance-tutorials"
+Most of what I know about crypto analysis on Binance, I learned from Part Time Larry. Check out his deets:
 
-> " Real-Time Candlestick Charts and Crypto Trading Bot using Binance API and Websockets
-> This source code is explained and demonstrated in my YouTube channel:
-> <https://youtube.com/parttimelarry>
-> Binance API series for the webapp starts here (there are 10 videos):
-> <https://www.youtube.com/watch?v=rvhnz1yBHgQ>
-> If you are only interested in the RSI bot:
-> <https://youtu.be/GdlFhF6gjKo> "
->
-> - part-time Larry
-
-Please buy this man a cup of coffee:
-<https://hackingthemarkets.com/>
+- PartTimeLarry
+- <https://hackingthemarkets.com/>
 
 ## Project Description
 
-Binance algo.
-Method: margin spread.
+<ul><li>[x] item1</li><li>[ ] item2</li></ul>
+
+- [X] 
+
+For this project, I acquired btcusd 1 minute kline data from theBinance API; <https://docs.binance.us/#introduction>. Tidying the data includes changing column labels, changing index to time index (`'close_time'` in this case) and finally the data is split into train, validate, test datasets. Data exploration delves into the descriptive statistics of the dataset. Further investigation includes up / down -sampling, frequency analysis, lag response, and autocorrelation. With a firm grasp of the data, I offer several models
+
 
 ## Project Goals
 
-1. Predict future bitcoin prices.
-1. Git money.
+Ultimately this project aims to predict future prices of bitcoin. If accurate predications can be obtained, the intention would be to use the predictions as buy / sell price indicators. The resulting indicators could be used as part of an automated trading strategy.
 
 ## Initial Questions
 
-1. Which features may be best for a regression model.
-1. Can I predict the future price of bitcoin.
+1. What result will time-series-analysis have on previous binance data?
+1. How accurate are predictions compared to actual values?
+1. Can I predict the future price of bitcoin?
 
 ## Data Dictionary
 
@@ -55,7 +49,6 @@ Method: margin spread.
     "0.00181514",      // Taker buy quote asset volume
     "0" // Ignore.
 
-
 ## Steps to Reproduce
 
 1. You will need an env.py file that contains the hostname, username and password for your Binance account. Please check the resources on their page for encrypted api access. Store that env file locally in the repository.
@@ -73,8 +66,8 @@ binance api
 
 - included in python-binance
 
-    - websockets
-    - <https://websockets.readthedocs.io/en/stable/>
+    1. websockets
+    1. <https://websockets.readthedocs.io/en/stable/>
 
 ## The Plan
 
@@ -122,5 +115,8 @@ Therefore, we strongly recommend conducting a similar analysis to determine whic
 ## Next Steps
 
 Given more time, I would like to:
+
+- explore a clustering model with the full set of candlestick features to glean and UML perspective of the data
+- compare RMSE of Facebook's "Prophet" model
 
 ---
