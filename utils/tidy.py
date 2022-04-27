@@ -46,5 +46,4 @@ def pre_cleaning(df):
 def btcusd():
 	df=tidy_btcusd()
 	df=pre_cleaning(df)
-	df=model_btcusd(df)
-	return df
+	return model_btcusd(df)

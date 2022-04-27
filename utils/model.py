@@ -40,7 +40,7 @@ def print_btcusd(train):
 
 def d_stats_btcusd(train):
 	train.close.plot.hist()
-	plt.ylabel('volume')
+	plt.ylabel('frequency')
 	plt.xlabel('btcusd price [$USD]')
 	plt.title('btcusd 1m kline, close price freq analysis')
 	plt.show()
@@ -52,6 +52,8 @@ def d_stats_btcusd(train):
 def trap_btcusd(train):
 	viz=train[['open','close','high','low']].resample('15min').mean()
 	g = sns.JointGrid()
+	g.fig.suptitle('btcusd 1m kline, full candlestick')
+	# plt.title(label='btcusd 1m kline, full candlestick')
 	g.fig.set_figwidth(16)
 	g.fig.set_figheight(10)
 	sns.scatterplot(data=viz,x=viz.index,y='open',ax=g.ax_joint)
@@ -59,7 +61,7 @@ def trap_btcusd(train):
 	sns.scatterplot(data=viz,x=viz.index,y='high',ax=g.ax_joint)
 	sns.scatterplot(data=viz,x=viz.index,y='low',ax=g.ax_joint)
 
-def yhat_model(train):
+def yhat_model(train,validate):
 	# last observed value
 	lov = train['close'][-1:][0]
 	# add lov to yhat
@@ -77,7 +79,7 @@ def yhat_model(train):
 	yhat_df=pd.concat([yhat_df,sma],axis=1)
 	# calc holt's linear trend prediction
 	model = Holt(train.close, exponential = True)
-	model = model.fit(smoothing_level = .1,smoothing_slope = .1,optimized = False)
+	model = model.fit(smoothing_level = .1,smoothing_trend = .1,optimized = False)
 	# add holts to yhat
 	yhat_items = model.predict(start = validate.index[0], end = validate.index[-1])
 	yhat_df['holt'] = round(yhat_items, 2)
