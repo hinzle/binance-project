@@ -98,17 +98,17 @@ Method:
 ### 3. Preparation
 
 - I cleaned and prepped the data by:
-  - removing all observations that included null values
-  - renaming columns for readability
-  - changing data types where appropriate
-  - set the index to `datetime`
+  - removing all observations that included null values.
+  - renaming columns for readability.
+  - changing data types where appropriate.
+  - set the index to `datetime`.
 
 ### 4. Exploration
 
-- I conducted an initial exploration of the data by examing relationships between each of the features and treated close price as a target
+- I conducted an initial exploration of the data by examing relationships between each of the features and treated close price as a target.
 - Next, I explored further using premier tools such as Pandas, Python, Statsmodels, etc..., to answer the initial questions posed above.
 - Findings:
-  - Frequency analysis revealed potential price indicators.
+  - frequency analysis revealed potential price indicators.
 
 ### 5. Forecasting / Modeling
 
@@ -133,7 +133,7 @@ While one model alone was not effective at predicting future values, there may b
 
 ### Given more time, I would like to:
 
-- explore a clustering model with the full set of candlestick features to glean an unsupervised machine's learning perspective
+- explore a clustering model with the full set of candlestick features to glean an unsupervised machine's learning perspective.
 - compare RMSE of Facebook's "Prophet" model to current models.
 
 ---
