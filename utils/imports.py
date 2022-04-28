@@ -49,6 +49,9 @@ import websocket, talib
 from binance.client import Client
 from binance.enums import *
 
+# facebook "prophet"
+from prophet import Prophet
+
 # state properties
 np.random.seed(123)
 pd.set_option("display.max_columns", None)

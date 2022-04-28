@@ -58,31 +58,6 @@ Example data entry
 
 ```
 
-## Steps to Reproduce
-
-1. You will need an env.py file that contains the hostname, username and password for your Binance account. Please check the resources on their page for encrypted api access. Store that env file locally in the repository.
-2. Clone my repo (including the tidy.py and model.py modules) (confirm .gitignore is hiding your env.py file)
-3. Libraries used:
-
-- pandas
-- matplotlib
-- seaborn
-- numpy
-- sklearn
-- math
-- statsmodels
-- scipy
-- <https://scipy.org/>
-- TA-Lib
-  - <https://mrjbq7.github.io/ta-lib/index.html>
-- binance api
-  - <https://www.binance.com/en/support/faq/360002502072>
-  - <https://algotrading101.com/learn/binance-python-api-guide/>
-  - <https://anaconda.org/conda-forge/python-binance>
-- included in python-binance
-  - websockets
-    - <https://websockets.readthedocs.io/en/stable/>
-
 ## The Plan
 
 Method:
@@ -135,5 +110,31 @@ While one model alone was not effective at predicting future values, there may b
 
 - explore a clustering model with the full set of candlestick features to glean an unsupervised machine's learning perspective.
 - compare RMSE of Facebook's "Prophet" model to current models.
+
+
+## Steps to Reproduce
+
+1. You will need an env.py file that contains the hostname, username and password for your Binance account. Please check the resources on their page for encrypted api access. Store that env file locally in the repository.
+2. Clone my repo (including the tidy.py and model.py modules) (confirm .gitignore is hiding your env.py file)
+3. Libraries used:
+
+- pandas
+- matplotlib
+- seaborn
+- numpy
+- sklearn
+- math
+- statsmodels
+- scipy
+- <https://scipy.org/>
+- TA-Lib
+  - <https://mrjbq7.github.io/ta-lib/index.html>
+- binance api
+  - <https://www.binance.com/en/support/faq/360002502072>
+  - <https://algotrading101.com/learn/binance-python-api-guide/>
+  - <https://anaconda.org/conda-forge/python-binance>
+- included in python-binance
+  - websockets
+    - <https://websockets.readthedocs.io/en/stable/>
 
 ---
