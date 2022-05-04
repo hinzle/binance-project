@@ -25,6 +25,7 @@ Ultimately this project aims to predict future prices of bitcoin. If accurate pr
 
 ## Data Dictionary
 
+Definitions for historical K-line data pulled from Binance API.
 Variables |Definition
 --- | ---
 Open time | time candlestick opened
@@ -40,9 +41,9 @@ Taker buy base asset volume | n/a
 Taker buy quote asset volume | n/a
 Ignore | n/a
 
-```text
-Example data entry
+Example data entry:
 
+```text
 1499040000000,      // Open time
 "0.00386200",       // Open
 "0.00386200",       // High
@@ -68,7 +69,7 @@ Method:
 
 ### 2. Acquisition
 
-- In this stage, I obtained btcusd trading pair data by querying the Binance REST API hosted at <https://api.binance.us/api/v3/klines>. 
+- In this stage, I obtained btcusd trading pair data by querying the Binance REST API hosted at <https://api.binance.us/api/v3/klines>.
 
 ### 3. Preparation
 
@@ -102,7 +103,7 @@ While one model alone was not effective at predicting future values, there may b
 ### I recommend a DO and a DO NOT:
 
 1. DO consider using the descriptive statistics to see highs and lows in the price of bitcoin over the past several hours and use that information, in conjunction with other sound trading principles, to find price points that are suitable for your portfolio.
-2. DO NOT use the models in this project to make trade decisions. The predictions in this project are wildly inaccurate compare to the behavior of the actual bitcoin market.
+2. DO NOT use the models in this project to make trade decisions. The predictions in this project are wildly inaccurate compared to the behavior of the actual bitcoin market.
 
 ## Next Steps
 
@@ -110,7 +111,6 @@ While one model alone was not effective at predicting future values, there may b
 
 - explore a clustering model with the full set of candlestick features to glean an unsupervised machine's learning perspective.
 - compare RMSE of Facebook's "Prophet" model to current models.
-
 
 ## Steps to Reproduce
 
